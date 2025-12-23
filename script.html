@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Gestión de Taxis - Modelado OOP</title>
+    <style>
+        :root {
+            --bg-color: #f8f9fa;
+            --card-bg: #ffffff;
+            --accent-color: #f1c40f; /* Taxi yellow */
+            --text-dark: #2c3e50;
+            --text-light: #7f8c8d;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Outfit', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-dark);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .card {
+            background: var(--card-bg);
+            padding: 2.5rem;
+            border-radius: 24px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            max-width: 500px;
+            width: 90%;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 6px;
+            background-color: var(--accent-color);
+        }
+
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+            color: #1a1a1a;
+        }
+
+        p {
+            color: var(--text-light);
+            line-height: 1.6;
+            margin-bottom: 2rem;
+        }
+
+        .status-badge {
+            display: inline-block;
+            padding: 8px 20px;
+            background: #fff9db;
+            color: #f08c00;
+            border-radius: 12px;
+            font-weight: 700;
+            font-size: 0.85rem;
+            letter-spacing: 0.5px;
+            margin-bottom: 20px;
+        }
+
+        .console-box {
+            background: #1e1e1e;
+            color: #569cd6;
+            padding: 15px;
+            border-radius: 12px;
+            font-family: 'Fira Code', monospace;
+            font-size: 0.9rem;
+            text-align: left;
+            margin-top: 1rem;
+            border: 1px solid #333;
+        }
+
+        .blink {
+            animation: blinker 1s linear infinite;
+        }
+
+        @keyframes blinker {
+            50% { opacity: 0; }
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&family=Fira+Code&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="card">
+        <div class="status-badge">OOP IMPLEMENTADO</div>
+        <h1>Modelado de Taxis</h1>
+        <p>La jerarquía de clases para el sistema de transporte ha sido definida utilizando JavaScript moderno (Herencia y Constructores).</p>
+
+        <div class="console-box">
+            <span style="color: #6a9955;">// Revisa la consola para ver los objetos</span><br>
+            <span style="color: #dcdcdc;">console.</span><span style="color: #dcdcaa;">log</span><span style="color: #dcdcdc;">(instancias);</span><span class="blink">|</span>
+        </div>
+
+        <p style="margin-top: 2rem; font-size: 0.8rem;">Presiona <b>F12</b> para explorar la estructura de clases.</p>
+    </div>
+
+    <!-- Carga del Script de Taxis -->
+    <script src="script.js"></script>
+</body>
+</html>
